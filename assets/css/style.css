@@ -1,0 +1,182 @@
+    :root {
+        --primary: #0d6efd;
+        --secondary: #6c757d;
+        --dark: #212529;
+        --light: #f8f9fa;
+        --success: #198754;
+        --danger: #dc3545;
+        --warning: #ffc107;
+        --info: #0dcaf0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        color: white;
+        padding: 120px 0 100px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+
+      .hero-title {
+        font-weight: 700;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Seções */
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 3rem;
+        position: relative;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--primary);
+        margin: 15px auto 0;
+      }
+
+      /* Cards */
+      .card-hover {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Skills */
+      .skill-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Projetos */
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .project-card img {
+        transition: transform 0.5s ease;
+      }
+
+      .project-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .project-overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        transition: bottom 0.3s ease;
+      }
+
+      .project-card:hover .project-overlay {
+        bottom: 0;
+      }
+
+      /* Contato */
+      .contact-icon {
+        font-size: 2rem;
+        margin: 0 15px;
+        color: var(--dark);
+        transition: all 0.3s ease;
+      }
+
+      .contact-icon:hover {
+        color: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      /* Botão modo escuro */
+      .dark-mode-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      /* Modo escuro */
+      body.dark-mode {
+        background-color: #121212;
+        color: #f8f9fa;
+      }
+
+      body.dark-mode .card-hover {
+        background-color: #1e1e1e;
+        color: #f8f9fa;
+      }
+
+      body.dark-mode .contact-icon {
+        color: #f8f9fa;
+      }
+
+      body.dark-mode .contact-icon:hover {
+        color: var(--primary);
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .section {
+          padding: 60px 0;
+        }
+      }
